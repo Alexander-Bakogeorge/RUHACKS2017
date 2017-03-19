@@ -170,8 +170,11 @@ public class DOFUCKINGEVERYTHING : MonoBehaviour {
             case 27:
                 foreach (GameObject o in Horses)
                 {
-                    o.transform.FindChild(particle.name).gameObject.SetActive(true);
-                }
+                    if (o != null)
+                    {
+                        o.transform.FindChild(particle.name).gameObject.SetActive(true);
+                    }
+                    }
                 break;
             case 28:
                 foreach (GameObject o in Horses)
