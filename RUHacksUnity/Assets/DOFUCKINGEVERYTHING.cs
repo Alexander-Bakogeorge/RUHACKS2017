@@ -58,13 +58,17 @@ public class DOFUCKINGEVERYTHING : MonoBehaviour {
             {
                  line = reader.ReadLine();
             }
+            if(line != String.Empty) { 
             String [] q = line.Split('+');
             currentState = Int32.Parse( q[0]);
-            if (!(currentState == prevState) || prevState == -1) {
-                prevState =(currentState);
-                print(q[1]);
-               
-                DoEverything(Int32.Parse(q[1].ToString()));
+                if (!(currentState == prevState) || prevState == -1)
+                {
+                    prevState = (currentState);
+                    print(q[1]);
+
+                    DoEverything(Int32.Parse(q[1].ToString()));
+
+                }
             }
 
         }
