@@ -656,6 +656,19 @@ namespace AC.TimeOfDaySystemFree
 			skyMaterial.SetFloat ("_StarsTwinkle", StarsTwinkle); 
 
 		}
-			
-	}
+        public void setHour(float hour) {
+            timeline = hour;
+        }
+        public void setDay(float secs)
+        {
+            dayInSeconds = secs;
+        }
+        public float getDay()
+        {
+            return dayInSeconds ;
+        }
+
+    }
+
+    
 }

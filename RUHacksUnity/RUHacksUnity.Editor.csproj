@@ -132,6 +132,7 @@
     <Compile Include="Assets\OVR\Editor\OVRManifestPreprocessor.cs" />
     <Compile Include="Assets\OVR\Editor\OVRMoonlightLoader.cs" />
     <Compile Include="Assets\OVR\Editor\OVRScreenshotWizard.cs" />
+    <Compile Include="Assets\SocketIO\JSONObject\Editor\JSONChecker.cs" />
     <Compile Include="Assets\Time Of Day System Free\Scripts\Editor\TimeOfDayManagerEditor.cs" />
     <Compile Include="Assets\Time Of Day System Free\Utility\Editor\AC_CustomEditor.cs" />
   </ItemGroup>
@@ -145,6 +146,8 @@
     <None Include="Assets\OVR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\OVR\Shaders\Unlit Crosshair.shader" />
     <None Include="Assets\Particle Ribbon\readme_Simple_Particle_Ribbon.txt" />
+    <None Include="Assets\SocketIO\JSONObject\readme.txt" />
+    <None Include="Assets\SocketIO\Readme.txt" />
     <None Include="Assets\Sounds\_readme_and_license.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
