@@ -1,5 +1,13 @@
 package relax;
 
+import java.io.FileNotFoundException;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+import org.apache.http.client.CredentialsProvider;
+
 import com.amazon.speech.slu.Intent;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.LaunchRequest;
@@ -11,9 +19,11 @@ import com.amazon.speech.speechlet.SpeechletException;
 import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.*;
+
 
 public class RelaxSpeechlet implements Speechlet {
-
     @Override
     public void onSessionStarted(final SessionStartedRequest request, final Session session)
             throws SpeechletException {
@@ -30,9 +40,9 @@ public class RelaxSpeechlet implements Speechlet {
         // If the user either does not reply to the welcome message or says
         // something that is not understood, they will be prompted again with this text.
         String repromptText = "For instructions on what you can say, please say help me.";
-
         // Here we are prompting the user for input
         return newAskResponse(speechOutput, repromptText);
+        
     }
 
     @Override
@@ -77,6 +87,19 @@ public class RelaxSpeechlet implements Speechlet {
     private SpeechletResponse relaxForest(Intent intent) {
     	PlainTextOutputSpeech o = new PlainTextOutputSpeech();
     	o.setText("Forest Selected");
+    	
+    	// create a script engine manager
+    	 ScriptEngineManager factory = new ScriptEngineManager();
+    	 // create a JavaScript engine
+    	 ScriptEngine engine = factory.getEngineByName("JavaScript");
+    	 // evaluate JavaScript code from String
+    	 try {
+			engine.eval(new java.io.FileReader(" amazon-cognito-js-master/src/ConnectCognito.js"));
+		} catch (FileNotFoundException | ScriptException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
         return SpeechletResponse.newTellResponse(o);
     }
 

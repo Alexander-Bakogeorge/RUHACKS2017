@@ -81,6 +81,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DOFUCKINGEVERYTHING.cs" />
+    <Compile Include="Assets\HorseAnimation.cs" />
+    <Compile Include="Assets\HorseMove.cs" />
+    <Compile Include="Assets\MusicRandom.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRBoundary.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
@@ -121,9 +125,10 @@
     <Compile Include="Assets\Time Of Day System Free\Scripts\TimeOfDay.cs" />
     <Compile Include="Assets\Time Of Day System Free\Scripts\TimeOfDayManager.cs" />
     <Compile Include="Assets\WalkAround.cs" />
+    <Compile Include="Assets\Webservice.cs" />
+    <Compile Include="Assets\soundRandom.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Butterfly (Animated)\Butterfly (Animated).txt" />
     <None Include="Assets\Horse\SoftAlpha.shader" />
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\OVR\Resources\Underlay Impostor.shader" />

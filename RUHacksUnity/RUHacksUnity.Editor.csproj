@@ -136,7 +136,6 @@
     <Compile Include="Assets\Time Of Day System Free\Utility\Editor\AC_CustomEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Butterfly (Animated)\Butterfly (Animated).txt" />
     <None Include="Assets\Horse\SoftAlpha.shader" />
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\OVR\Resources\Underlay Impostor.shader" />

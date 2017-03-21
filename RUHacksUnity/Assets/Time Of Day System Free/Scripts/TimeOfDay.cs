@@ -57,7 +57,7 @@ namespace AC.TimeOfDaySystemFree
 		// Day duration in the earth.
 		protected const float k_DayDuration = 24f;
 
-		public float  Hour{ get; private set; }
+		public float  Hour{ get;  set; }
 		public float  Minute{ get; private set; }
 		//----------------------------------------------------------------------------------------
 
